@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "CaskaydiaCove Nerd Font Mono:pixelsize=20:antialias=true:autohint=true";
 // static char *font2[] = { "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
-static char *font2[] = { "fontawesome:pixelsize=10:antialias=true:autohint=true" };
+static char *font2[] = { "CaskaydiaCove Nerd Font Mono:pixelsize=20:antialias=true:autohint=true" };
 static int borderpx = 2;
 
 /*
@@ -108,34 +108,69 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.85;
+float alpha = 0.95;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
+#define base0 "#2E3440"
+#define base1 "#3B4252"
+#define base2 "#434C5E"
+#define base3 "#4C566A"
+#define base4 "#D8DEE9"
+#define base5 "#E5E9F0"
+#define base6 "#ECEFF4"
+#define base7 "#8FBCBB"
+#define base8 "#88C0D0"
+#define base9 "#81A1C1"
+#define base10 "#5E81AC"
+#define base11 "#BF616A"
+#define base12 "#D08770"
+#define base13 "#EBCB8B"
+#define base14 "#A3BE8C"
+#define base15 "#B48EAD"
+
+static char termcol0[] = base1;
+static char termcol1[] = base11;
+static char termcol2[] = base14;
+static char termcol3[] = base13;
+static char termcol4[] = base9;
+static char termcol5[] = base15;
+static char termcol6[] = base8;
+static char termcol7[] = base5;
+static char termcol8[]  = base3;
+static char termcol9[]  = base11;
+static char termcol10[] = base14;
+static char termcol11[] = base13;
+static char termcol12[] = base9;
+static char termcol13[] = base15;
+static char termcol14[] = base7;
+static char termcol15[] = base6;
+
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
+  termcol0,
+  termcol1,
+  termcol2,
+  termcol3,
+  termcol4,
+  termcol5,
+  termcol6,
+  termcol7,
+  termcol8,
+  termcol9,
+  termcol10,
+  termcol11,
+  termcol12,
+  termcol13,
+  termcol14,
+  termcol15,
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#add8e6", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
-	"#282828", /* 258 -> bg */
-	"#ebdbb2", /* 259 -> fg */
+	"#282c34", /* 258 -> bg */
+	"#bbbbbb", /* 259 -> fg */
 };
 
 
